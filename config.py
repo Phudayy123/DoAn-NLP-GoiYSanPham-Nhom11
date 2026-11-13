@@ -1,9 +1,11 @@
 # config.py - Cấu hình tham số toàn hệ thống và Siêu tham số (Hyperparameters)
+import os
 
-DATA_PATH = "data.csv"
-STOPWORDS_PATH = "vietnamese_stopwords.txt"
-MODEL_SAVE_PATH = "svm_tfidf_pipeline.pkl"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+DATA_PATH = os.path.join(BASE_DIR, "data", "data.csv")
+STOPWORDS_PATH = os.path.join(BASE_DIR, "data", "vietnamese_stopwords.txt")
+MODEL_SAVE_PATH = os.path.join(BASE_DIR, "models", "svm_tfidf_pipeline.pkl")
 # Tham số chia tập dữ liệu Huấn luyện / Kiểm thử
 TEST_SIZE = 0.20          # 20% Test (300 mẫu), 80% Train (1.200 mẫu)
 RANDOM_SEED = 42          # Cố định hạt giống ngẫu nhiên

@@ -82,5 +82,5 @@ for i in range(1001, 1501):
 random.shuffle(data)
 
 df = pd.DataFrame(data, columns=["id", "ten_san_pham", "danh_muc", "mo_ta_chi_tiet", "gia", "link_san_pham"])
-df.to_csv("data.csv", index=False, encoding="utf-8-sig")
+df.to_csv("data/data.csv", index=False, encoding="utf-8-sig")
 print("Đã cập nhật thành công data.csv với độ nhiễu ~28% (Accuracy ~ 72.67%)!")
