@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 import webbrowser
-from nlp_engine import ProductRecommender
+from core.nlp_engine import ProductRecommender
 
 class RecommendationApp:
     def __init__(self, root):

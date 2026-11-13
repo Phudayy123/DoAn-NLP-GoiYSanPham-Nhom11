@@ -56,7 +56,8 @@ for i in range(501, 1001):
         f"Hiện có sẵn kích cỡ size {size}, đường may tỉ mỉ, chuẩn form."
     )
     gia = random.randint(10, 50) * 10000
-    link = f"https://shopee.vn/search?keyword={ctype.replace(' ', '+').lower()}+{style.split()[0].lower()}"
+    clean_style = style.split("(")[0].strip().replace(" ", "+").lower()
+    link = f"https://shopee.vn/search?keyword={ctype.replace(' ', '+').lower()}+{clean_style}"
     
     label = "Thời trang" if random.random() > 0.28 else random.choice(["Laptop", "Phụ kiện"])
     data.append([i, ten, label, mo_ta, gia, link])

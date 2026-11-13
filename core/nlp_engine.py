@@ -4,8 +4,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 import config
-from text_preprocessor import VietnameseTextPreprocessor
-from model_evaluator import CategoryModelTrainer
+from core.text_preprocessor import VietnameseTextPreprocessor
+from core.model_evaluator import CategoryModelTrainer
 
 class ProductRecommender:
     def __init__(self, data_path=config.DATA_PATH, stopwords_path=config.STOPWORDS_PATH):
